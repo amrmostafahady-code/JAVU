@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="JAVU — اكتشف عطرك القادم. عطور مميزة بأحجام وأسعار واضحة، والطلب بسهولة عبر واتساب.">
+<meta name="theme-color" content="#080909">
+<meta property="og:title" content="JAVU | More Than a Scent">
+<meta property="og:description" content="اكتشف عطرك القادم من مجموعة JAVU.">
+<meta property="og:type" content="website">
+<title>JAVU | More Than a Scent</title>
+<style>
+:root{--bg:#080909;--panel:#111313;--line:#292d2d;--text:#f5f5f2;--muted:#a6aaa8;--accent:#d7bd8a;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.topbar{background:#111414;border-bottom:1px solid var(--line);padding:8px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#c8cbc8;font-size:12px}
+header{display:flex;align-items:center;gap:24px;padding:18px 5%;border-bottom:1px solid var(--line);position:sticky;top:0;background:#080909ed;backdrop-filter:blur(12px);z-index:5}
+.logo{font-family:Georgia,serif;font-size:34px;letter-spacing:7px;direction:ltr;white-space:nowrap}.logo small{display:block;font-family:Arial,sans-serif;font-size:8px;letter-spacing:4px;text-align:center;margin-top:-5px}
+nav{display:flex;gap:22px;align-items:center;margin-inline-start:auto;font-size:14px}nav a:hover{color:var(--accent)}
+.search{display:flex;align-items:center;gap:8px;border:1px solid #3a3e3e;border-radius:30px;padding:8px 14px;min-width:210px}.search input{width:100%;background:transparent;border:0;outline:0;color:white}
+.cart-btn,.outline-btn{background:transparent;color:white;border:1px solid #414545;border-radius:9px;padding:9px 14px}.cart-count{background:var(--accent);color:#111;border-radius:50%;padding:1px 6px;font-size:12px;margin-right:5px}
+.hero{min-height:390px;display:flex;align-items:center;padding:54px 7%;background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.65) 48%,rgba(0,0,0,.15)),url('assets/collection-grid.png') center 45%/cover}
+.hero-copy{max-width:510px}.eyebrow{font-size:12px;letter-spacing:4px;color:var(--accent);direction:ltr;text-align:right}.hero h1{font-size:clamp(32px,5vw,58px);line-height:1.2;margin:14px 0}.hero p{color:#d4d5d1;max-width:420px}.primary-btn{border:0;background:var(--white);color:#111;border-radius:30px;padding:12px 25px;font-weight:bold;display:inline-flex;align-items:center;gap:10px;margin-top:12px}.primary-btn:hover{background:var(--accent)}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);padding:20px 5%;gap:15px;background:#0d0f0f}.benefit{text-align:center;font-size:14px}.benefit span{display:block;color:var(--muted);font-size:12px}
+main{max-width:1400px;margin:auto;padding:42px 5%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:22px}.section-head h2{margin:0;font-size:27px}.section-head p{color:var(--muted);margin:5px 0 0;font-size:13px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid var(--line);border-radius:30px;background:transparent;color:#ddd;padding:8px 16px}.filter.active,.filter:hover{background:var(--accent);border-color:var(--accent);color:#111}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product{background:linear-gradient(160deg,#151818,#0b0d0d);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}.product-img{height:235px;background:#171919;position:relative;overflow:hidden}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.product:hover .product-img img{transform:scale(1.04)}.tag{position:absolute;top:12px;right:12px;background:#0a0b0bdc;color:var(--accent);padding:4px 9px;border-radius:5px;font-size:11px}
+.product-info{padding:14px}.product-info h3{font-size:16px;margin:0 0 4px}.sub{font-size:12px;color:var(--muted)}.price-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:14px 0}.price{font-weight:bold;font-size:18px;direction:ltr;white-space:nowrap}.old-price{font-size:12px;color:#858987;text-decoration:line-through;margin-right:6px}.add{width:100%;border:1px solid #454949;background:transparent;color:white;padding:10px;border-radius:8px}.add:hover{background:var(--accent);color:#111;border-color:var(--accent)}
+.about{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;background:#101212;border:1px solid var(--line);border-radius:14px;padding:28px}.about h2{margin-top:0}.about p{color:var(--muted)}.about img{width:100%;height:250px;object-fit:cover;border-radius:10px}
+footer{border-top:1px solid var(--line);padding:30px 5%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:13px}.footer-logo{color:white;font-family:Georgia,serif;letter-spacing:5px;font-size:24px}
+.modal-bg{position:fixed;inset:0;background:#000b;z-index:10;display:none;align-items:center;justify-content:center;padding:16px}.modal-bg.open{display:flex}.modal{background:#111414;border:1px solid #343939;border-radius:14px;width:min(650px,100%);max-height:90vh;overflow:auto;padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:center}.close{background:none;border:0;color:white;font-size:26px}.cart-line{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0}.qty{display:flex;align-items:center;gap:8px}.qty button{background:#252929;color:white;border:0;border-radius:5px;width:28px;height:28px}.remove{background:none;color:#d99;border:0}.total{display:flex;justify-content:space-between;font-size:19px;font-weight:bold;margin:18px 0}
+form{display:grid;gap:12px;margin-top:18px}label{font-size:13px;color:#c7cac7}input,select,textarea{width:100%;background:#090b0b;border:1px solid #343939;border-radius:8px;padding:11px;color:white;margin-top:5px;outline-color:var(--accent)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}.notice{font-size:12px;color:var(--muted);margin-top:12px}.empty{text-align:center;padding:25px;color:var(--muted)}
+@media(max-width:950px){nav{display:none}.search{margin-inline-start:auto;min-width:150px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-img{height:210px}}
+@media(max-width:560px){.topbar{justify-content:center;text-align:center}.topbar span:last-child{display:none}header{padding:12px 4%;gap:10px;flex-wrap:wrap}.logo{font-size:27px}.search{order:3;min-width:100%;margin:0}.hero{min-height:360px;padding:40px 6%;background-position:60% center}.benefits{grid-template-columns:repeat(2,1fr)}main{padding:30px 4%}.grid{gap:10px}.product-img{height:170px}.product-info{padding:10px}.product-info h3{font-size:14px}.price{font-size:15px}.about{grid-template-columns:1fr;padding:18px}.about img{height:180px}.two-col{grid-template-columns:1fr}.cart-line{grid-template-columns:1fr auto}.cart-line .remove{grid-column:1/-1;text-align:right}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>شحن سريع داخل مصر · الدفع عند الاستلام</span><span>JAVU — More Than a Scent</span></div>
+<header>
+  <a class="logo" href="#" aria-label="JAVU home">JAVU<small>MORE THAN A SCENT</small></a>
+  <nav><a href="#home">الرئيسية</a><a href="#products">المنتجات</a><a href="#about">عن JAVU</a><a href="#contact">تواصل معنا</a></nav>
+  <div class="search"><span>⌕</span><input id="search" type="search" placeholder="ابحث عن عطرك المفضل..." aria-label="ابحث عن منتج"></div>
+  <button class="cart-btn" id="open-cart">السلة <span class="cart-count" id="cart-count">0</span></button>
+</header>
+<section class="hero" id="home">
+  <div class="hero-copy"><div class="eyebrow">PREMIUM FRAGRANCES</div><h1>رائحة تصنع حضورك</h1><p>اكتشف عطرك القادم من مجموعة عطور مختارة بعناية، تناسب كل لحظة وكل مناسبة.</p><a class="primary-btn" href="#products">تسوق الآن <span>←</span></a></div>
+</section>
+<section class="benefits">
+  <div class="benefit">✧ جودة نهتم بها<span>اختيارات بعناية</span></div>
+  <div class="benefit">♧ اختيارات متنوعة<span>روائح تناسب ذوقك</span></div>
+  <div class="benefit">♧ شحن داخل مصر<span>تأكيد تفاصيل التوصيل</span></div>
+  <div class="benefit">♡ خدمة العملاء<span>نتابع طلبك معك</span></div>
+</section>
+<main>
+  <section id="products">
+    <div class="section-head"><div><h2>اكتشف مجموعتنا</h2><p>اختار الرائحة اللي تناسبك</p></div><span class="sub" id="result-count"></span></div>
+    <div class="filters" id="filters">
+      <button class="filter active" data-cat="الكل">الكل</button><button class="filter" data-cat="رجالي">رجالي</button><button class="filter" data-cat="حريمي">حريمي</button><button class="filter" data-cat="يونيسكس">يونيسكس</button>
+    </div>
+    <div class="grid" id="product-grid"></div>
+  </section>
+  <section class="about" id="about">
+    <div><div class="eyebrow">ABOUT JAVU</div><h2>العطر جزء من حكايتك</h2><p>في JAVU بنساعدك تكتشف روائح تعبر عن شخصيتك وتناسب يومك. اختار عطرك، ابعت طلبك، وفريقنا هيتواصل معاك لتأكيد التفاصيل.</p><a href="#products" class="primary-btn">اكتشف المنتجات</a></div>
+    <img src="assets/collection-grid.png" alt="مجموعة عطور أنيقة" loading="lazy">
+  </section>
+</main>
+<footer id="contact"><div><div class="footer-logo">JAVU</div><div>More Than a Scent</div></div><div>للطلب والاستفسار: واتساب JAVU 01098333234</div><div>© <span id="year"></span> JAVU. جميع الحقوق محفوظة.</div></footer>
+
+<div class="modal-bg" id="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+  <div class="modal"><div class="modal-head"><h2 id="cart-title">سلة مشترياتك</h2><button class="close" id="close-cart" aria-label="إغلاق">×</button></div>
+    <div id="cart-lines"></div><div style="margin-top:16px"><label>كود الخصم (اختياري)<input id="coupon-code" type="text" placeholder="أدخل كود الخصم" autocomplete="off"></label><button type="button" class="outline-btn" id="apply-coupon" style="margin-top:8px">تطبيق الكود</button><p id="coupon-message" class="notice" aria-live="polite"></p></div>
+    <div class="total"><span>قيمة المنتجات</span><span id="subtotal">0 ج.م</span></div><div class="total" style="font-size:15px;color:#d7bd8a;margin-top:-10px"><span>الخصم</span><span id="discount">0 ج.م</span></div><div class="total"><span>الإجمالي المستحق</span><span id="cart-total">0 ج.م</span></div>
+    <form id="checkout-form">
+      <h3>بيانات التوصيل</h3>
+      <div class="two-col"><label>الاسم بالكامل<input name="name" required autocomplete="name" placeholder="اسمك بالكامل"></label><label>رقم الموبايل<input name="phone" required type="tel" autocomplete="tel" placeholder="01xxxxxxxxx"></label></div>
+      <label>العنوان بالتفصيل<input name="address" required autocomplete="street-address" placeholder="المحافظة، المنطقة، الشارع، رقم المبنى"></label>
+      <div class="two-col"><label>المحافظة<input name="governorate" required placeholder="مثال: القاهرة"></label><label>طريقة الدفع<select name="payment"><option>الدفع عند الاستلام</option><option>تحويل بنكي (يتم تأكيده يدويًا)</option></select></label></div>
+      <label>ملاحظات للطلب (اختياري)<textarea name="notes" rows="2" placeholder="أي تفاصيل إضافية"></textarea></label>
+      <button class="primary-btn" type="submit" style="justify-content:center;width:100%">إرسال الطلب عبر واتساب</button>
+    </form>
+    <p class="notice">الطلب يُرسل عبر واتساب للتأكيد. كود JAVU10 يمنح خصمًا مبدئيًا 10%، ويؤكد المتجر الخصم والإجمالي قبل تجهيز الطلب.</p>
+  </div>
+</div>
+<script>
+const WHATSAPP_NUMBER = "201098333234"; // WhatsApp international format: Egypt +20
+const products = [
+ {id:1,name:"SUGARETTE",ar:"Sugarette",cat:"يونيسكس",desc:"Caramel, sugar, honey, vanilla, musk and almond candy",img:"assets/sugarette.jpg"},
+ {id:2,name:"MESTEKA",ar:"مِستكّه",cat:"حريمي",desc:"Strawberry candy, vanilla, musk, amber and sandalwood",img:"assets/mesteka.jpg"},
+ {id:3,name:"IRIS",ar:"Iris",cat:"حريمي",desc:"Strawberry, cherry, tangerine, lemon, jasmine, white musk, vanilla, wood and amber",img:"assets/iris.jpg"},
+ {id:4,name:"GOOEY",ar:"Gooey",cat:"يونيسكس",desc:"Cinnamon, tonka beans, oak, vanilla, candy almonds, almonds and sandalwood",img:"assets/gooey.jpg"},
+ {id:5,name:"NOVE",ar:"Nove",cat:"يونيسكس",desc:"Orange, lemon, fruit, white musk, amber and vanilla",img:"assets/nove.jpg"},
+ {id:6,name:"VIBE",ar:"Vibe",cat:"رجالي",desc:"Lemon, pineapple, apple and vanilla",img:"assets/vibe.jpg"},
+ {id:7,name:"SWEET DAZE",ar:"Sweet Daze",cat:"رجالي",desc:"Vanilla, black pepper, tonka bean and incense",img:"assets/sweet-daze.jpg"},
+ {id:8,name:"SILT",ar:"Silt",cat:"رجالي",desc:"Tobacco, vanilla, cocoa, wood and spices",img:"assets/silt.jpg"},
+ {id:9,name:"VIGOR",ar:"Vigor",cat:"رجالي",desc:"Lavender, pear, mint, lemon, vanilla and amber",img:"assets/vigor.jpg"},
+ {id:10,name:"SAVORA",ar:"Savora",cat:"حريمي",desc:"Tangerine, fruits, vanilla, musk and sandalwood",img:"assets/savora.jpg"}
+];
+const sizes=[{label:"30 مل",price:350},{label:"50 مل",price:500},{label:"100 مل",price:700}];
+let cart = {}; let activeCat="الكل"; let couponApplied=false;
+const fmt=n=>new Intl.NumberFormat("ar-EG").format(n)+" ج.م";
+function renderProducts(){
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const list=products.filter(p=>(activeCat==="الكل"||p.cat===activeCat)&&[p.name,p.ar,p.cat,p.desc].join(" ").toLowerCase().includes(q));
+ document.getElementById("result-count").textContent=list.length+" عطور";
+ document.getElementById("product-grid").innerHTML=list.map(p=>`<article class="product"><div class="product-img"><img src="${p.img}" alt="عطر JAVU ${p.name}" loading="lazy"><span class="tag">JAVU</span></div><div class="product-info"><h3>${p.ar}</h3><div class="sub">${p.name} · عطر ${p.cat}</div><p class="sub">${p.desc}</p><label>اختار الحجم<select id="size-${p.id}" aria-label="حجم ${p.name}">${sizes.map(z=>`<option value="${z.label}" ${z.label==="30 مل"?"selected":""}>${z.label} — ${fmt(z.price)}</option>`).join("")}</select></label><div class="price-row"><span class="price" id="price-${p.id}">350 ج.م</span></div><button class="add" onclick="addToCart(${p.id})">＋ أضف إلى السلة</button></div></article>`).join("")||'<div class="empty">مفيش منتجات مطابقة للبحث.</div>';
+ list.forEach(p=>{const sel=document.getElementById(`size-${p.id}`);sel.addEventListener('change',()=>{const z=sizes.find(x=>x.label===sel.value);document.getElementById(`price-${p.id}`).textContent=fmt(z.price)})});
+}
+function addToCart(id){const sel=document.getElementById(`size-${id}`);const size=sel.value;const key=`${id}|${size}`;cart[key]=(cart[key]||0)+1;renderCart();document.getElementById("cart-modal").classList.add("open")}
+function changeQty(key,d){cart[key]=(cart[key]||0)+d;if(cart[key]<=0)delete cart[key];renderCart()}
+function getItems(){return Object.entries(cart).map(([key,qty])=>{const [id,size]=key.split('|');const p=products.find(p=>p.id===Number(id));const z=sizes.find(z=>z.label===size);return {p,size,price:z.price,qty,key}}).filter(x=>x.p)}
+function calculate(){const items=getItems();const subtotal=items.reduce((s,x)=>s+x.price*x.qty,0);const code=document.getElementById('coupon-code').value.trim().toUpperCase();const valid=code==='JAVU10'&&subtotal>=100;const discount=(couponApplied&&valid)?Math.round(subtotal*.10):0;return {items,subtotal,discount,total:subtotal-discount,code,valid}}
+function renderCart(){const {items,subtotal,discount,total,code,valid}=calculate();const count=items.reduce((s,x)=>s+x.qty,0);document.getElementById("cart-count").textContent=count;document.getElementById("subtotal").textContent=fmt(subtotal);document.getElementById("discount").textContent=discount?"− "+fmt(discount):fmt(0);document.getElementById("cart-total").textContent=fmt(total);
+ document.getElementById("cart-lines").innerHTML=items.length?items.map(({p,size,price,qty,key})=>`<div class="cart-line"><div><strong>${p.ar}</strong><div class="sub">${size} · ${fmt(price)} للقطعة</div></div><div class="qty"><button type="button" onclick="changeQty('${key}',-1)">−</button><span>${qty}</span><button type="button" onclick="changeQty('${key}',1)">+</button></div><button type="button" class="remove" onclick="changeQty('${key}',-${qty})">حذف</button></div>`).join(""):'<div class="empty">السلة لسه فاضية. اختار عطر يعجبك.</div>';
+ document.getElementById("checkout-form").style.display=items.length?"grid":"none";
+ if(couponApplied){document.getElementById('coupon-message').textContent=valid?'تم تطبيق كود JAVU10 مبدئيًا؛ الخصم النهائي في انتظار تأكيد المتجر.':(code==='JAVU10'?'الحد الأدنى لتطبيق الكود 100 جنيه.':'الكود غير صحيح. استخدم JAVU10.')} }
+document.getElementById("search").addEventListener("input",renderProducts);
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("button[data-cat]");if(!b)return;activeCat=b.dataset.cat;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
+document.getElementById("open-cart").onclick=()=>document.getElementById("cart-modal").classList.add("open");document.getElementById("close-cart").onclick=()=>document.getElementById("cart-modal").classList.remove("open");document.getElementById("cart-modal").addEventListener("click",e=>{if(e.target.id==="cart-modal")e.currentTarget.classList.remove("open")});
+document.getElementById('apply-coupon').addEventListener('click',()=>{couponApplied=true;renderCart();const c=document.getElementById('coupon-code').value.trim().toUpperCase();if(c!=='JAVU10')document.getElementById('coupon-message').textContent='الكود غير صحيح. استخدم JAVU10.';else if(calculate().subtotal<100)document.getElementById('coupon-message').textContent='الحد الأدنى لتطبيق الكود 100 جنيه.';else document.getElementById('coupon-message').textContent='تم تطبيق الكود مبدئيًا. الخصم النهائي في انتظار تأكيد JAVU.'});
+document.getElementById('coupon-code').addEventListener('input',()=>{couponApplied=false;renderCart();document.getElementById('coupon-message').textContent='اضغط تطبيق الكود لحساب الخصم.'});
+document.getElementById("checkout-form").addEventListener("submit",e=>{e.preventDefault();const {items,subtotal,discount,total,code,valid}=calculate();if(!items.length){alert("السلة فاضية");return}const f=new FormData(e.target);const lines=items.map(({p,size,price,qty})=>`• ${p.name} (${p.ar}) - ${size} × ${qty} = ${price*qty} ج.م`).join("\n");const msg=`طلب جديد من متجر JAVU\n\n${lines}\n\nقيمة المنتجات: ${subtotal} ج.م\nكود الخصم: ${couponApplied&&valid?code:'بدون'}\nالخصم المطلوب (في انتظار موافقة JAVU): ${discount} ج.م\nالإجمالي المقترح: ${total} ج.م\n\nالاسم: ${f.get('name')}\nالموبايل: ${f.get('phone')}\nالعنوان: ${f.get('address')}\nالمحافظة: ${f.get('governorate')}\nالدفع: ${f.get('payment')}\nملاحظات: ${f.get('notes')||'لا يوجد'}\n\nيرجى تأكيد الطلب والخصم يدويًا من JAVU.`;const waUrl=`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;const waWindow=window.open(waUrl,"_blank");if(!waWindow)window.location.href=waUrl});
+document.getElementById("year").textContent=new Date().getFullYear();
+renderProducts();renderCart();
+</script>
+</body>
+</html>
